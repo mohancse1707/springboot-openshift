@@ -1,3 +1,8 @@
+FROM maven:3.8-openjdk-11 as build
+WORKDIR /opt/app
+COPY . .
+RUN mvn install
+
 # For Java 8, try this
 FROM openjdk:8-jdk-alpine
 
